@@ -1,0 +1,13 @@
+filename=input()
+with open(filename,'r') as file:
+    lines=len(file.readlines())
+    print("number of lines are :",lines)
+with open(filename,'r') as file:
+    content=file.read()
+    char =len(str(content))
+    print("number of charachters are:",char)
+with open(filename,'r') as file:
+    smallest=0
+    lines=files.readlines()
+     
+

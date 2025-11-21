@@ -1,0 +1,11 @@
+import math
+number=int(input())
+for i in range(number):
+    number2=float(input("number"))
+    print(math.floor(number2))
+    print(math.ceil(number2))
+    print(math.trunc(number2))
+
+
+
+    

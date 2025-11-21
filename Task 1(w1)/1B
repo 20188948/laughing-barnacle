@@ -1,0 +1,6 @@
+teas = int(input("How many teas?: "))
+coffees = int(input("How many coffees?: "))
+income1=teas*2
+income2=coffees*3
+totalincome=income1+income2
+print("Total income is £",totalincome)

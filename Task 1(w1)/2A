@@ -1,0 +1,18 @@
+vowels = ['a','e','i','o','u']
+consonants=[
+    'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm',
+    'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+vowel=0
+consonant=0
+other=0
+section=input("Enter a short section of text: ")
+for i in section:
+    if i in vowels:
+        vowel+=1
+    elif i in consonants:
+        consonant +=1
+    else:
+        other += 1
+print(vowel)
+print(consonant)
+print(other)

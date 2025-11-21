@@ -1,0 +1,10 @@
+filename = input()
+with open(filename,'r') as file:
+    text = file.read()
+
+user_dict= {}
+for char in text:
+    if char.isalpha():
+        char = char.lower()
+        user_dict[char.lower()] = user_dict.get(char,0) + 1
+print(user_dict) 
