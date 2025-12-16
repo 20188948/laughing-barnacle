@@ -1,0 +1,6 @@
+Tea 5
+Coffee 3
+Tea 2
+Coffee 7
+Tea 4
+Coffee 1

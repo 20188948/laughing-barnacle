@@ -1,0 +1,31 @@
+{
+    "foyer": {
+        "id": "foyer",
+        "name": "The Grand Entrance",
+        "description": "A vast, marble hall...",
+        "exits": {
+            "west": "hallway"
+        },
+        "items": []
+    },
+    "hallway": {
+        "id": "hallway",
+        "name": "Dusty hallway",
+        "description": "This Long,narrow passage is lined with cobweb-covered portraits.The marbleends here,replaced by rough wood. An exit leads back east",
+        "exits": {
+            "east": "foyer"
+        },
+        "items": [
+            {
+                "name": "Old Map",
+                "description": "A crinkled piece of parchment.",
+                "can_be_picked_up": true
+            },
+            {
+                "name": "Heavy Statue",
+                "description": "A very heavy statue that sits in the corner of the hallway",
+                "can_be_picked_up": false
+            }
+        ]
+    }
+}

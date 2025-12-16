@@ -1,0 +1,3 @@
+book=input("Enter a title of a book: ")
+print("The title has",len(book),"chrachters")
+print(book.upper())
