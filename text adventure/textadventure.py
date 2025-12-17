@@ -1,3 +1,12 @@
+print("Edwin discovered an ancient method called The Binding of Rooms, a ritual meant to trap memories inside physical spaces. At first, it worked:")
+print("The library remembered knowledge.")
+print("The study remembered secrets.")
+print("The basement remembered fear.")
+
+print("But memories began to pile up, bleed together, and awaken.")
+print("On the night of the final ritual, Edwin tried to bind himself to the house so his mind could live on forever. The ritual failed.")
+print("He never left the house")
+print("The house never forgot him")
 #Item Key
 item_key={
     'name':'Brass Key',
@@ -10,6 +19,19 @@ item_heavystatue={
     'can_be_picked_up':False
 
 }
+item_book_unforgetting={
+    'name':'Brand new book',
+    'description':'The books leather cover is barely worn, unlike the others. Its spine is warm to the touch, as if it has been handled recently.',
+    'can_be_picked_up':True
+    
+}
+
+item_key_libary={
+    'name':'libary key',
+    'description':'A small brass key, A tiny engraving of a desk drawer is etched into its bow.',
+    'can_be_picked_up':True
+}
+
 #Original room 
 room_foyer={
     'id':'foyer',
@@ -28,26 +50,40 @@ room_hallway={
     'items':[]
 }
 
+room_libary = {
+    'id':'libary',
+    'name':'grand libary',
+    'description':'Edwin believed knowledge could be preserved forever if the room itself remembered it.'
+    '  A single book brand new catches your eye',
+    'exits':{},
+    'items':[]
+}
+
+
+
 
 #Global State
-WORLD = {'foyer':room_foyer, 'hallway':room_hallway}
+WORLD = {'foyer':room_foyer, 'hallway':room_hallway, 'libary':room_libary}
 PLAYER_INVENTORY = [item_key]
 CURRENT_ROOM_ID = 'foyer'
 
 #Connecting Rooms
 WORLD['foyer']['exits']={'west':'hallway'}
-WORLD['hallway']['exits']={'east':'foyer'}
+WORLD['hallway']['exits']={'east':'foyer','north':'libary'}
+WORLD['libary']['exits']={'south':'hallway'}
 
 #Placing items 
 item_map = {'name': "Old Map", 'description': 'A crinkled piece of parchment.', 'can_be_picked_up': True} 
 WORLD['hallway']['items']=[]
 WORLD['hallway']['items'].append(item_map)
 WORLD['hallway']['items'].append(item_heavystatue)
+WORLD['libary']['items']=[]
+WORLD['libary']['items'].append(item_book_unforgetting)
+WORLD['libary']['items'].append(item_key_libary)
 
 
 #code to say where you are
 current_room = WORLD['foyer']
-print("In the Foyer, you see:")
 for item in current_room['items']:
     print(f"- {item['name']}: {item['description']}")
 

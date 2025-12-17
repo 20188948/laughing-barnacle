@@ -13,7 +13,8 @@
         "name": "Dusty hallway",
         "description": "This Long,narrow passage is lined with cobweb-covered portraits.The marbleends here,replaced by rough wood. An exit leads back east",
         "exits": {
-            "east": "foyer"
+            "east": "foyer",
+            "north": "libary"
         },
         "items": [
             {
@@ -25,6 +26,26 @@
                 "name": "Heavy Statue",
                 "description": "A very heavy statue that sits in the corner of the hallway",
                 "can_be_picked_up": false
+            }
+        ]
+    },
+    "libary": {
+        "id": "libary",
+        "name": "grand libary",
+        "description": "Edwin believed knowledge could be preserved forever if the room itself remembered it.  A single book brand new catches your eye",
+        "exits": {
+            "south": "hallway"
+        },
+        "items": [
+            {
+                "name": "Brand new book",
+                "description": "The books leather cover is barely worn, unlike the others. Its spine is warm to the touch, as if it has been handled recently.",
+                "can_be_picked_up": true
+            },
+            {
+                "name": "hidden key",
+                "description": "A small brass key, warm from being hidden in the book. A tiny engraving of a desk drawer is etched into its bow.",
+                "can_be_picked_up": true
             }
         ]
     }
